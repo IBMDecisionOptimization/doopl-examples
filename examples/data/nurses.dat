@@ -1,0 +1,140 @@
+// --------------------------------------------------------------------------
+// Licensed Materials - Property of IBM
+//
+// 5725-A06 5725-A29 5724-Y48 5724-Y49 5724-Y54 5724-Y55
+// Copyright IBM Corporation 1998, 2013. All Rights Reserved.
+//
+// Note to U.S. Government Users Restricted Rights:
+// Use, duplication or disclosure restricted by GSA ADP Schedule
+// Contract with IBM Corp.
+// --------------------------------------------------------------------------
+
+
+MaxWorkTime = 40;
+
+SkillRequirements = {<"Emergency","Cardiac",1>};
+
+Skills = {"Anaesthetics" "Cardiac" "Oncology" "Aged Care" "Child Health"};
+
+Departments = {"Emergency" "Consultation"};
+
+Nurses = {<"Anne" 11 1 25 > <"Bethanie" 4 5 28> <"Betsy" 2 2 17> <"Cathy"
+            2 2 17 > <"Cecilia" 9 5 38> <"Chris" 11 4 38> <"Cindy" 5 2 21> <"David" 1 2 15> <"Debbie" 7 2 24> <"Dee" 3 3 21> <"Gloria" 8 2 25> <"Isabelle"
+            3 1 16> <"Jane" 3 4 23> <"Janelle" 4 3 22> <"Janice" 2 2 17> <"Jemma" 2 4 22> <"Joan" 5 3 24> <"Joyce" 8 3 29> <"Jude" 4 3 22> <"Julie" 6 2 22> <"Juliet" 7 4 31> <"Kate" 5 3 24> <"Nancy" 8 4 32> <"Nathalie" 9 5 38>
+            <"Nicole" 0 2 14> <"Patricia" 1 1 13> <"Patrick" 6 1 19> <"Roberta" 3 5 26> <"Suzanne" 5 1 18> <"Vickie" 7 1 20> <"Wendie" 5 2 21> <"Zoe" 8 3 29>};
+Shifts = {<"Emergency" Monday 2 8 3 5> <"Emergency" Monday 8 12 4 7> <"Emergency"
+"Monday" 12 18 2 5> <"Emergency" "Monday" 18 2 3 7> <"Consultation" "Monday" 8 12 10 13> <"Consultation" "Monday" 12 18 8 12> <"Emergency" "Monday" 2 8 3 5> <"Emergency"
+            "Tuesday" 8 12 4 7> <"Emergency" "Tuesday" 12 18 2 5> <"Emergency" "Tuesday" 18 2 3 7> <"Consultation" "Tuesday" 8 12 10 13> <"Consultation" "Tuesday" 12 18 8 12> <"Emergency" "Wednesday" 2 8 3 5> <"Emergency" "Wednesday" 8 12 4 7> <"Emergency" "Wednesday" 12 18 2 5> <"Emergency"
+            "Wednesday" 18 2 3 7> <"Consultation" "Wednesday" 8 12 10 13> <"Consultation" "Wednesday" 12 18 8 12> <"Emergency" "Thursday" 2 8 3 5> <"Emergency" "Thursday" 8 12 4 7> <"Emergency"  "Thursday" 12 18 2 5> <"Emergency"  "Thursday" 18 2 3 7> <"Consultation"  "Thursday" 8 12 10 13> <"Consultation"  "Thursday" 12 18 8 12> <"Emergency" "Friday" 2 8 3 5> <"Emergency"  "Friday" 8 12 4 7> <"Emergency"
+             "Friday" 12 18 2 5> <"Emergency"  "Friday" 18 2 3 7> <"Consultation"  "Friday" 8 12 10 13> <"Consultation"  "Friday" 12 18 8 12> <"Emergency" "Saturday" 2 12 5 7> <"Emergency" "Saturday" 12 20 7 9> <"Emergency" "Saturday" 20 2 12 12> <"Emergency" "Sunday" 2 12 5 7> <"Emergency" "Sunday" 12 20 7 9> <"Emergency" "Sunday" 20 2 12 12>};
+Weekdays = {"Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday"
+        "Sunday"};
+        
+NurseAssoc = {<"Isabelle","Dee"> <"Anne","Patrick">};
+NurseIncompat = {<"Patricia","Patrick">};
+DepartmentIncompat = {<"Isabelle","Emergency">};
+
+Vacations = [[0 0 0 0 0 0 1]
+            [0 1 0 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [0 0 1 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [0 0 0 1 0 0 0]
+            [0 0 0 0 0 0 1]
+            [0 0 0 0 1 0 0]
+            [0 1 0 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [0 0 0 0 0 0 1]
+            [1 0 0 0 0 0 0]
+            [0 0 0 0 0 1 0]
+            [0 0 0 1 0 0 0]
+            [0 0 0 0 0 0 1]
+            [0 0 0 0 0 1 0]
+            [0 0 0 0 0 0 1]
+            [0 0 0 1 0 0 0]
+            [0 0 0 0 0 0 1]
+            [0 1 0 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [0 0 0 0 0 1 0]
+            [0 0 0 0 0 1 0]
+            [0 0 1 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [0 0 1 0 0 0 0]
+            [0 0 0 0 1 0 0]
+            [1 0 0 0 0 0 0]
+            [0 0 0 0 0 1 0]
+            [0 0 0 1 0 0 0]
+            [0 1 0 0 0 0 0]
+            [0 0 0 0 1 0 0]];
+           
+NurseSkill = [[1 0 1 0 1]
+              [0 0 0 0 0]
+              [0 1 0 0 0]
+              [1 0 0 0 0]
+              [1 0 1 0 1]
+              [0 1 1 1 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 1]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 1 0 0 0]
+              [0 0 0 0 0]
+              [1 0 0 0 1]
+              [0 0 0 0 0]
+              [0 0 0 1 0]
+              [0 0 0 0 1]
+              [0 0 0 0 1]
+              [0 1 0 0 0]
+              [1 0 0 1 0]
+              [0 0 0 0 0]
+              [0 0 0 0 0]
+              [0 0 1 0 0]
+              [0 0 0 0 0]
+              [0 0 0 0 1]
+              [0 0 0 0 0]
+              [0 0 0 1 0]
+              [0 1 0 0 0]];
+
+RequiredAssignments= [
+  [1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+];
+
+
+
+

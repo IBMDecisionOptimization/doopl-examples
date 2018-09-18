@@ -1,0 +1,9 @@
+{
+    "provider": ["IBM"], 
+    "name":  "IBM OPL connector for Python (DOopl) samples" ,
+    "model": [ "CPLEX", "CPO", "OPL" ],
+    "development": [ "Python", "OPL" ],
+    "category": [ {"MODELING":["ADVANCED MODELING"]} ],
+    "industry": [ "Operational research" ],
+    "abstract": "These samples demonstrate how to use the DOopl library to model and solve optimization problems."
+}
