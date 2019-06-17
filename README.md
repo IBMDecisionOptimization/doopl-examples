@@ -28,7 +28,7 @@ Solving with CPLEX requires that IBM&reg; ILOG CPLEX Optimization Studio V12.8.0
 
 ## License
 
-This library is delivered under the  Apache License Version 2.0, January 2004 (see LICENSE.txt).
+This library is delivered under the  Apache License Version 2.0, January 2004 (see [LICENSE](LICENSE.txt)).
 
 ## Starting point
 
