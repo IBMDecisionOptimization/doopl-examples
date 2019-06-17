@@ -24,7 +24,7 @@ Solving with CPLEX requires that IBM&reg; ILOG CPLEX Optimization Studio V12.8.0
  of CPLEX Optimization Studio, with limited solving capabilities in term of problem size.
 
 - Faculty members, research professionals at accredited institutions can get access to an unlimited version of CPLEX through the
- [IBM&reg; Academic Initiative](http://www-304.ibm.com/ibm/university/academic/pub/page/ban_ilog_programming).
+ [IBM&reg; Academic Initiative](https://ibm.onthehub.com/WebStore/ProductSearchOfferingList.aspx?srch=cplex).
 
 ## License
 
