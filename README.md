@@ -6,7 +6,16 @@ Licensed under the Apache License v2.0.
 With this library, you can quickly and easily add the power of optimization to
 your Python application. You can model your problems by using the OPL language and IDE, and integrate it in Python via Python/pandas/sql alchemy inputs/outputs.
 
-Solving with CPLEX requires that IBM&reg; ILOG CPLEX Optimization Studio V12.8.0 is installed on your machine.
+Solving with CPLEX requires that IBM&reg; ILOG CPLEX Optimization Studio is installed on your machine.
+Currently, `doopl` supports CPLEX Optimization Studio versions:
+- 12.8
+- 12.9
+- 12.10
+
+We provide the library for python 3.6, 3.7 and 3.8.
+
+This library is an example showing how to use data sources in python in OPL.
+It is provided "as-is".
 
 ## Install the library
 
@@ -35,7 +44,7 @@ This library is delivered under the  Apache License Version 2.0, January 2004 (s
 The API is very compact and simple.
 You must have the OPL binaries in your PATH/LD_LIBRARY_PATH or DYLD_LIBRARY_PATH, depending on your platform.
 They are located in <code>&lt;cplex_studio_dir&gt;/opl/bin/&lt;platform&gt;</code> where
-   * cplex_studio_dir is the installation directory of CPLEX 12.8
+   * cplex_studio_dir is the installation directory of CPLEX Optimization Studio
    * platform is your plaform.
 
 Here is small sumup of the capabilities:
