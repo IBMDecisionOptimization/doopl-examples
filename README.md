@@ -12,7 +12,7 @@ Currently, `doopl` supports CPLEX Optimization Studio versions:
 - 12.9
 - 12.10
 
-We provide the library for python 3.6, 3.7 and 3.8.
+We provide the library for python 3.6 and 3.7.
 
 This library is an example showing how to use data sources in python in OPL.
 It is provided "as-is".
