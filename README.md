@@ -17,6 +17,9 @@ We provide the library for python 3.6 and 3.7.
 This library is an example showing how to use data sources in python in OPL.
 It is provided "as-is".
 
+We don't plan to provide the library as a standard Python package anymore: the connector source code is now on the IBM public github.
+If you need a more recent version of optimization engine and/or if you need a more recent Python version, you can have a look at the [code](https://github.com/IBMDecisionOptimization/doopl) and refer to the README for build instructions.
+
 ## Install the library
 
 ```
